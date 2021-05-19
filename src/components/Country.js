@@ -18,11 +18,11 @@ export function Country({ country }) {
 				alt={country.name}
 				className="w-full rounded-tl-lg rounded-tr-lg h-1/2"
 			/>
-			<div className="flex flex-col px-6 pt-8 pb-10 h-1/2">
+			<div className="flex flex-col justify-center h-full px-6 pt-8 pb-10">
 				<span className="w-full mb-4">
 					<Link
 						to={`/country/${country.name}`}
-						className="text-lg font-extrabold hover:underline"
+						className="text-lg font-extrabold lg:text-xl hover:underline"
 					>
 						{country.name}
 					</Link>
@@ -37,7 +37,7 @@ export function Country({ country }) {
 						</span>
 					</li>
 					<li className="flex items-center">
-						<span className="mr-2 font-semibold">Region: </span>
+						<span className="mr-2 font-bold">Region: </span>
 						<span>{country.region}</span>
 					</li>
 					<li className="flex items-center">
