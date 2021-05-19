@@ -11,14 +11,16 @@ export function Country({ country }) {
 				darkMode
 					? "bg-darkblue text-white"
 					: "shadow-lg bg-vlgray text-vdblue_text"
-			} grid grid-cols-1 rounded-lg w-5/6 transform hover:scale-105 hover:shadow-lg transition-transform ease-in-out duration-200 lg:w-full mx-auto mb-10 lg:m-0`}
+			} grid grid-cols-1 lg:grid-cols-none lg:grid-rows-2 rounded-lg w-5/6 transform hover:scale-105 hover:shadow-lg transition-transform ease-in-out duration-200 lg:w-full mx-auto mb-10 lg:m-0`}
 		>
-			<img
-				src={country.flag}
-				alt={country.name}
-				className="w-full rounded-tl-lg rounded-tr-lg h-1/2"
-			/>
-			<div className="flex flex-col justify-center h-full px-6 pt-8 pb-10">
+			<div className="h-full grid-rows-1">
+				<img
+					src={country.flag}
+					alt={country.name}
+					className="object-cover w-full h-full rounded-tl-lg rounded-tr-lg"
+				/>
+			</div>
+			<div className="h-full grid-cols-1 px-6 pt-8 pb-10">
 				<span className="w-full mb-4">
 					<Link
 						to={`/country/${country.name}`}
